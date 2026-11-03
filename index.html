@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+      rel="icon"
+      type="image/jpeg"
+      href="https://i.postimg.cc/G2N7gLtP/anh-photoretrica.png"
+    />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title id="page-title">Profile - BaoHung</title>
+      <meta name="description" content="@baohung.xyz — student profile " />
+      <meta name="theme-color" content="#0b0d0e" id="meta-theme" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="@baohung.xyz — Student" />
+  <meta property="og:description" content="Learning to build websites" />
+  <meta property="og:image" content="./og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="@baohung.xyz — Student" />
+  <meta name="twitter:description" content="Learning to build websites" />
+  <meta name="twitter:image" content="./og.png" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <script>
+    (function(){try{var t=localStorage.getItem("thn_theme");if(t==="light"){document.documentElement.classList.add("light-boot");}}catch(e){}})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.discordapp.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    .social-icon svg,.social-icon img{width:26px;height:26px;flex-shrink:0}
+    html.light-boot body{background-color:#f3f4f6}
+    #home .hero-top{
+      gap:26px;
+      padding:20px;
+      border:1px solid rgba(var(--YG4Cai6CgUqfogGXylFM0S),.09);
+      border-radius:8px;
+      background:linear-gradient(125deg,rgba(var(--YG4Cai6CgUqfogGXylFM0S),.045),rgba(var(--YG4Cai6CgUqfogGXylFM0S),.012) 62%,rgba(35,165,90,.035));
+    }
+    #home .username{font-size:1.7rem;line-height:1.15;letter-spacing:0}
+    #home .tagline{color:var(--cYDm3HXglNBZiKrj3WC2UJ);font-size:.9rem}
+    #home .chips{margin-top:8px}
+    #home #now-line{margin:14px 4px 10px}
+    .hero[hidden]{display:none!important}
+    .profile-overview{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:24px}
+    .profile-name{margin:0;color:var(--cYDm3HXglNBZiKrj3WC2UJ);font-size:1.75rem;font-weight:600;line-height:1.12}
+    .profile-meta{margin-top:6px;color:var(--EjW7V3CJLvO6THGq);font-family:"IBM Plex Mono",monospace;font-size:.68rem;text-transform:uppercase}
+    .profile-overview .about-text{margin-top:14px}
+    .bio-clock{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-top:3px;font-variant-numeric:tabular-nums;text-align:right}
+    #profile-date{color:var(--EjW7V3CJLvO6THGq);font-family:"IBM Plex Mono",monospace;font-size:.68rem;line-height:1.3;white-space:nowrap}
+    #bio-clock-time{color:var(--cYDm3HXglNBZiKrj3WC2UJ);font-family:"Space Grotesk",sans-serif;font-size:2.1rem;font-weight:600;line-height:1;white-space:nowrap}
+    .resume-grid{display:grid;grid-template-columns:1fr;gap:0;margin-top:22px;max-width:500px}
+    .resume-item{display:grid;grid-template-columns:130px minmax(0,1fr);align-items:baseline;gap:16px;padding:9px 0}
+    .resume-item dt{color:var(--EjW7V3CJLvO6THGq);font-family:"IBM Plex Mono",monospace;font-size:.68rem;text-transform:uppercase}
+    .resume-item dd{min-width:0;color:var(--cYDm3HXglNBZiKrj3WC2UJ);font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
+    .music-dock{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:16px;width:100%;max-width:700px;margin:26px auto 18px;padding:14px;border:1px solid rgba(255,255,255,.22);border-radius:14px;background:#0a0a0b;box-shadow:0 10px 28px rgba(0,0,0,.2)}
+    .music-art{display:grid;place-items:center;width:64px;height:64px;border-radius:10px;background:linear-gradient(145deg,#1a1a1d,#080808);color:#f4f1f5;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+    .music-art svg{width:25px;height:25px}
+    .music-art.is-playing svg{animation:recordSpin 5s linear infinite}
+    @keyframes recordSpin{to{transform:rotate(360deg)}}
+    @media(prefers-reduced-motion:reduce){.music-art.is-playing svg{animation:none}}
+    .music-center{display:grid;gap:10px;min-width:0}
+    .music-dock-top{display:flex;align-items:center;gap:10px;min-width:0}
+    .music-track-copy{display:flex;flex:1;flex-direction:column;gap:3px;min-width:0}
+    #music-track-name{overflow:hidden;color:#f5f5f5;font-size:.78rem;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+    #music-track-status{overflow:hidden;color:#d4d4d8;font-size:.66rem;text-overflow:ellipsis;white-space:nowrap}
+    .music-progress-row{display:grid;grid-template-columns:auto minmax(40px,1fr) auto;align-items:center;gap:9px;color:#d4d4d8;font-family:"IBM Plex Mono",monospace;font-size:.62rem;font-variant-numeric:tabular-nums}
+    .music-progress-row input{width:100%;height:4px;margin:0;accent-color:#ffffff;cursor:pointer}
+    .music-progress-row input:disabled{cursor:default;opacity:.45}
+    .music-controls{display:flex;align-items:center;justify-content:flex-end;gap:6px}
+    .music-control{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid rgba(255,255,255,.2);border-radius:7px;background:#111214;color:#f5f5f5;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
+    .music-control:hover{border-color:rgba(255,255,255,.45);background:#1a1a1c;color:#ffffff}
+    .music-control svg{width:16px;height:16px}
+    .music-control:disabled{cursor:not-allowed;opacity:.35}
+    .music-control-play{border-color:#f5f5f5;background:#f5f5f5;color:#0a0a0b}
+    .music-control-play:hover{background:#ffffff;color:#0a0a0b}
+    .music-control-separator{width:1px;height:20px;margin:0 3px;background:rgba(255,255,255,.18)}
+    @media(max-width:520px){.profile-overview{grid-template-columns:1fr;gap:14px}.bio-clock{align-items:flex-start;margin-top:0;text-align:left}#profile-date{white-space:normal}#bio-clock-time{font-size:1.8rem}}
+    @media(max-width:360px){.profile-name{font-size:1.5rem}#profile-date{font-size:.62rem}#bio-clock-time{font-size:1.6rem}}
+    @media(max-width:520px){
+      #home .hero-top{align-items:center;gap:16px;padding:16px}
+      #home .avatar{width:96px;height:96px}
+      #home .avatar-decor{width:120px;height:120px}
+      #home .username{font-size:1.25rem}
+      #home .hero-info{gap:6px}
+      #home .chips{gap:6px 10px}
+    }
+    @media(max-width:600px){.music-dock{grid-template-columns:52px minmax(0,1fr);gap:12px;padding:12px}.music-art{width:52px;height:52px}.music-center{gap:9px}.music-controls{grid-column:1/-1;justify-content:flex-end}.music-control,.music-choose{width:32px;height:32px;flex-basis:32px}}
+    @media(max-width:480px){.resume-item{grid-template-columns:92px minmax(0,1fr);gap:10px}}
+
+    /* ---- Loader / enter fallback safety ---- */
+    body:not(.locked){overflow:auto}
+
+    /* ---- Reveal-on-scroll ---- */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.is-visible{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+    /* ---- Avatar wrap: fixed box so flex centering always has real dimensions ---- */
+    #home .avatar-wrap{width:120px;height:120px}
+    @media(max-width:520px){#home .avatar-wrap{width:96px;height:96px}}
+
+    /* ---- style.css has a malformed selector for hiding the skeleton
+       (".avatar-wrap.is-loading.avatar-skeleton" requires ONE element with all
+       three classes at once, but avatar-skeleton is a separate child div — so
+       it never matches and the skeleton stays visible forever at 120px,
+       bleeding past a shrunk mobile avatar into the text next to it).
+       Fix: hide it explicitly once loading is done, and keep it sized to
+       match whatever size avatar-wrap actually is. ---- */
+    #home .avatar-wrap .avatar-skeleton{
+      width:100%!important;height:100%!important;inset:0!important;
+    }
+    #home .avatar-wrap:not(.is-loading) .avatar-skeleton{
+      opacity:0!important;pointer-events:none!important;
+    }
+
+    /* ---- Undo the overly-broad ".avatar-wrap > *{position:relative}" glow rule
+       for elements that need position:absolute to sit correctly ---- */
+    .avatar-wrap > .avatar-skeleton,
+    .avatar-wrap > .avatar-decor,
+    .avatar-wrap > .avatar-initials{
+      position:absolute!important
+    }
+
+    /* ---- Avatar fallback initials: sits exactly where .avatar would ---- */
+    .avatar-initials{
+      position:absolute;inset:0;z-index:1;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:linear-gradient(145deg,#232628,#101213);
+      border:1px solid rgba(255,255,255,.1);
+      font-family:"Space Grotesk",sans-serif;font-size:2.1rem;font-weight:700;
+      color:#f5f5f5;letter-spacing:.02em
+    }
+    @media(max-width:520px){.avatar-initials{font-size:1.6rem}}
+
+    /* ---- Hero / about spacing polish ---- */
+    #home{padding-top:72px}
+    #home .hero-info{display:flex;flex-direction:column;gap:4px}
+    #home .role{color:var(--EjW7V3CJLvO6THGq);font-family:"IBM Plex Mono",monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+    .caret{display:inline-block;width:2px;height:1em;margin-left:2px;background:currentColor;vertical-align:-0.15em;animation:caretBlink 1s steps(1) infinite}
+    @keyframes caretBlink{50%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){.caret{animation:none}}
+    #about{margin-top:8px}
+    .profile-summary .about-text{color:var(--sImPpYzSP5yisq9ShisvI);line-height:1.6;max-width:56ch}
+
+    /* ---- Focus visibility for accessibility ---- */
+    a:focus-visible,button:focus-visible,[role="button"]:focus-visible,input:focus-visible{
+      outline:2px solid rgba(255,255,255,.55);outline-offset:3px;border-radius:6px
+    }
+
+    /* ---- Footer polish ---- */
+    .footer{padding:28px 18px 32px;text-align:center}
+    .footer-sub{color:var(--EjW7V3CJLvO6THGq);font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.04em}
+
+    /* Avatar alignment fix: keep the image inside the intended avatar frame. */
+    #home .hero-top{display:flex;align-items:center;min-width:0}
+    #home .avatar-wrap{
+      position:relative;
+      flex:0 0 120px;
+      width:120px;height:120px;
+      min-width:120px;min-height:120px;
+    }
+    #home .avatar{
+      display:block;
+      width:100%!important;height:100%!important;
+      max-width:100%;
+      object-fit:cover;object-position:center;
+      border-radius:50%;
+    }
+    #home .hero-info{flex:1 1 auto;min-width:0}
+    @media(max-width:520px){
+      #home .avatar-wrap{flex-basis:96px;width:96px;height:96px;min-width:96px;min-height:96px}
+      #home .avatar{width:100%!important;height:100%!important}
+      #home .hero-info{min-width:0}
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.lucide?.createIcons();
+
+      // ---- Avatar: set source, fall back to initials if it fails to load ----
+      var avatarImg = document.querySelector(".avatar");
+      var avatarWrap = document.querySelector("#avatar-wrap");
+      if (avatarImg) {
+        avatarImg.src = "./avt.png";
+        avatarImg.addEventListener("load", function () {
+          avatarImg.classList.add("is-ready");
+          avatarWrap?.classList.remove("is-loading");
+        });
+        avatarImg.addEventListener("error", function () {
+          avatarWrap?.classList.remove("is-loading");
+          avatarImg.style.visibility = "hidden";
+          if (avatarWrap && !avatarWrap.querySelector(".avatar-initials")) {
+            var span = document.createElement("span");
+            span.className = "avatar-initials";
+            span.textContent = "BH";
+            avatarWrap.appendChild(span);
+          }
+        });
+      }
+      // ---- Hero reveal (no longer depends on live Discord status) ----
+      var hero = document.querySelector("#home");
+      var nowLine = document.querySelector("#now-line");
+      var kvDesc = document.querySelector("#kv-desc");
+      hero?.removeAttribute("hidden");
+      nowLine?.remove();
+      kvDesc?.remove();
+
+      // ---- Loader -> Enter overlay -> unlock ----
+      var body = document.body;
+      var enterScreen = document.querySelector("#enter");
+      var loader = document.querySelector("#loader");
+
+      function unlockSite() {
+        if (!body.classList.contains("locked")) return;
+        body.classList.remove("locked");
+        enterScreen?.classList.add("done");
+        enterScreen?.classList.remove("show");
+        setTimeout(function () { enterScreen?.remove(); }, 520);
+      }
+
+      function showEnterScreen() {
+        loader?.classList.add("done");
+        enterScreen?.classList.add("show");
+        setTimeout(function () { loader?.remove(); }, 520);
+      }
+
+      if (enterScreen) {
+        enterScreen.addEventListener("click", unlockSite);
+        enterScreen.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            unlockSite();
+          }
+        });
+        // loader plays briefly, then the "click to enter" screen takes over
+        setTimeout(showEnterScreen, 900);
+      } else {
+        unlockSite();
+      }
+
+      // ---- Theme toggle (light / dark) ----
+      var themeBtn = document.querySelector("#theme-btn");
+      var metaTheme = document.querySelector("#meta-theme");
+      function applyTheme(mode) {
+        document.documentElement.classList.toggle("light-boot", mode === "light");
+        body.classList.toggle("light", mode === "light");
+        if (metaTheme) metaTheme.content = mode === "light" ? "#f3f4f6" : "#0b0d0e";
+        if (themeBtn) {
+          themeBtn.innerHTML = mode === "light"
+            ? '<i data-lucide="moon"></i>'
+            : '<i data-lucide="sun"></i>';
+          window.lucide?.createIcons({ nodes: [themeBtn] });
+        }
+        try { localStorage.setItem("thn_theme", mode); } catch (e) {}
+      }
+      var savedTheme = "dark";
+      try { savedTheme = localStorage.getItem("thn_theme") || "dark"; } catch (e) {}
+      applyTheme(savedTheme);
+      themeBtn?.addEventListener("click", function () {
+        applyTheme(body.classList.contains("light") ? "dark" : "light");
+      });
+
+      // ---- Reveal-on-scroll for .reveal elements ----
+      var revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window && revealEls.length) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+      }
+
+      // ---- Typing page title ----
+      var pageTitleEl = document.querySelector("#page-title");
+      if (pageTitleEl) {
+        var titlePhrases = ["Profile - BaoHung", "@baohung.xyz", "Student"];
+        var tpIndex = 0, tcIndex = 0, tDeleting = false;
+        function typeTitleLoop() {
+          var current = titlePhrases[tpIndex];
+          if (!tDeleting) {
+            tcIndex++;
+            document.title = current.slice(0, tcIndex);
+            if (tcIndex === current.length) {
+              tDeleting = true;
+              setTimeout(typeTitleLoop, 1400);
+              return;
+            }
+          } else {
+            tcIndex--;
+            document.title = current.slice(0, tcIndex);
+            if (tcIndex === 0) {
+              tDeleting = false;
+              tpIndex = (tpIndex + 1) % titlePhrases.length;
+            }
+          }
+          setTimeout(typeTitleLoop, tDeleting ? 45 : 90);
+        }
+        typeTitleLoop();
+      }
+
+      // ---- Typing tagline ----
+      var taglineText = document.querySelector("#tagline-text");
+      if (taglineText) {
+        var phrases = ["Learning", "Building", "Growing"];
+        var pIndex = 0, cIndex = 0, deleting = false;
+        function typeLoop() {
+          var current = phrases[pIndex];
+          if (!deleting) {
+            cIndex++;
+            taglineText.textContent = current.slice(0, cIndex);
+            if (cIndex === current.length) {
+              deleting = true;
+              setTimeout(typeLoop, 1400);
+              return;
+            }
+          } else {
+            cIndex--;
+            taglineText.textContent = current.slice(0, cIndex);
+            if (cIndex === 0) {
+              deleting = false;
+              pIndex = (pIndex + 1) % phrases.length;
+            }
+          }
+          setTimeout(typeLoop, deleting ? 45 : 90);
+        }
+        typeLoop();
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function syncBiography() {
+        const bio = document.querySelector("#about .about-text");
+
+        if (bio) {
+          const description = "I am an ordinary person, striving to become a better version of myself and constantly learning.";
+          if (bio.textContent !== description) bio.textContent = description;
+        }
+
+        const navLinks = document.querySelector("#nav-links");
+        if (navLinks && !navLinks.querySelector("[data-profile-bio]")) {
+          const item = document.createElement("li");
+          const link = document.createElement("a");
+          const icon = document.createElement("i");
+          link.className = "nav-link";
+          link.href = "#about";
+          link.dataset.profileBio = "true";
+          link.setAttribute("aria-label", "Biography");
+          link.title = "Biography";
+          icon.setAttribute("data-lucide", "contact");
+          link.appendChild(icon);
+          item.appendChild(link);
+          navLinks.appendChild(item);
+          window.lucide?.createIcons();
+        }
+
+        const homeLink = navLinks?.querySelector('a[data-route="home"]');
+        if (homeLink) {
+          homeLink.setAttribute("aria-label", "Home");
+          homeLink.title = "Home";
+          homeLink.childNodes.forEach(function (node) {
+            if (node.nodeType === Node.TEXT_NODE) node.remove();
+          });
+        }
+
+        const biographyLink = navLinks?.querySelector("[data-profile-bio]");
+        if (biographyLink && !biographyLink.dataset.scrollReady) {
+          biographyLink.dataset.scrollReady = "true";
+          biographyLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector("#about")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+      }
+
+      syncBiography();
+      new MutationObserver(syncBiography).observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
+</head>
+<body class="locked">
+  <a class="skip-link" href="#home">Skip to content</a>
+  <div class="enter" id="enter" role="button" tabindex="0" aria-label="Click to enter">
+    <span class="enter-text">click to enter</span>
+  </div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-bar"><span id="loader-fill"></span></span>
+    </div>
+  </div>
+  <noscript><style>.loader{display:none}.enter{display:none}body.locked{overflow:auto}</style></noscript>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span></div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link active" href="#/home" data-route="home" aria-label="Home" title="Home"><i data-lucide="home"></i></a></li>
+        <li><a class="nav-link" href="#about" data-profile-bio aria-label="Biography" title="Biography"><i data-lucide="contact"></i></a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <i data-lucide="menu" class="icon-menu"></i>
+          <i data-lucide="x" class="icon-close"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="standard-container">
+    <div id="view-home" class="view">
+    <section class="hero" id="home" hidden>
+      <div class="hero-top">
+        <div id="avatar-wrap" class="avatar-wrap"> <!-- Đã xóa class is-loading -->
+    <img class="avatar" src="./avt.png" alt="BaoHung profile avatar" />
+    <div class="avatar-skeleton" style="display: none;"></div> <!-- Ẩn khung chờ -->
+</div>
+        <div class="hero-info">
+          <h1 class="username">BaoHung</h1>
+          <span class="role">Student</span>
+          <p class="tagline"><span id="tagline-text">Learning</span><span class="caret" aria-hidden="true"></span></p>
+          <p id="kv-desc" class="status is-loading">
+            <span class="skeleton-bar"></span>
+            <span class="skeleton-bar short"></span>
+          </p>
+          <div class="chips">
+            <span class="chip"><i data-lucide="map-pin" class="chip-icon"></i>Vietnam</span>
+          </div>
+        </div>
+      </div>
+      <div id="now-line" class="now-line is-loading"><span class="skeleton-bar"></span></div>
+      <div id="rpc-slot"></div>
+    </section>
+
+    <section class="block" id="about">
+      <div class="profile-overview">
+        <div class="profile-summary">
+          <h2 class="stats-header" style="margin-bottom:10px">About</h2>
+          <p class="about-text reveal">I am an ordinary person, striving to become a better version of myself and constantly learning.</p>
+        </div>
+        <div class="bio-clock" aria-label="Current date and time">
+          <time id="profile-date"></time>
+          <time id="bio-clock-time">--:--:--</time>
+        </div>
+      </div>
+      <dl class="resume-grid">
+        <div class="resume-item reveal"><dt>Dream</dt><dd>Developer</dd></div>
+        <div class="resume-item reveal"><dt>Current focus</dt><dd>Learning and building personal projects</dd></div>
+      </dl>
+    </section>
+    
+    <section class="block" id="socials">
+      <div class="stats-divider"></div>
+      <h2 class="stats-header">Socials</h2>
+      <div class="capture-box">
+        <span class="capture-text">Find me around the internet</span>
+      </div>
+      <div class="social-grid stagger" style="margin-top: 14px;">
+        <a class="social-card reveal reveal-left" href="https://www.facebook.com/baohung.xyz" target="_blank" rel="noopener">
+          <span class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
+          <span class="social-info">
+            <span class="social-nick">Facebook</span>
+            <span class="social-handle">@baohung.xyz</span>
+          </span>
+        </a>
+        <a class="social-card reveal reveal-right" href="https://discord.com/users/1315200954798182431" target="_blank" rel="noopener">
+          <span class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.319 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128c-.598.349-1.22.645-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03ZM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg></span>
+          <span class="social-info">
+            <span class="social-nick">Discord</span>
+            <span class="social-handle">@baohung.xyz</span>
+          </span>
+        </a>
+        <a class="social-card reveal reveal-left" href="https://www.instagram.com/baohung.xyz/" target="_blank" rel="noopener">
+          <span class="social-icon"><img src="https://cdn.simpleicons.org/instagram/8B949E" alt="" aria-hidden="true" /></span>
+          <span class="social-info">
+            <span class="social-nick">Instagram</span>
+            <span class="social-handle">@baohung.xyz</span>
+          </span>
+        </a>
+        <a class="social-card reveal reveal-left"  href="https://www.threads.com/@baohung.xyz" target="_blank" rel="noopener">
+          <span class="social-icon"><img src="https://cdn.simpleicons.org/threads/8B949E" alt="" aria-hidden="true" /></span>
+          <span class="social-info">
+            <span class="social-nick">Threads</span>
+            <span class="social-handle">@baohung.xyz</span>
+          </span>
+        </a>
+        <a class="social-card reveal reveal-right" href="https://www.tiktok.com/@baohung.xyz" target="_blank" rel="noopener">
+          <span class="social-icon"><img src="https://cdn.simpleicons.org/tiktok/8B949E" alt="" aria-hidden="true" /></span>
+          <span class="social-info">
+            <span class="social-nick">TikTok</span>
+            <span class="social-handle">@baohung.xyz</span>
+          </span>
+        </a>
+        <a 
+        class="social-card reveal reveal-right"
+                href="portfolio/portfolio.html"
+              target="_blank" rel="noopener"
+              >
+          <span class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg></span>
+          <span class="social-info">
+            <span class="social-nick">Portfolio</span>
+            <span class="social-handle">About Me, Skills, Projects,...</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="block" id="skills">
+      <div class="stats-divider"></div>
+      <h2 class="stats-header">My Programming Languages</h2>
+      <ul class="stack stagger">
+        <li class="reveal">HTML</li>
+        <li class="reveal">CSS</li>
+        <li class="reveal">JavaScript</li>
+        <li class="reveal">Python</li>
+      </ul>
+    </section>
+    <section class="music-dock" aria-label="Music player">
+      <span class="music-art" id="music-art" aria-hidden="true"><i data-lucide="disc-3"></i></span>
+      <div class="music-center">
+        <div class="music-dock-top">
+          <div class="music-track-copy" aria-live="polite">
+            <span id="music-track-name">Đang chọn bài...</span>
+            <span id="music-track-status">Playlist Random</span>
+          </div>
+        </div>
+        <div class="music-progress-row">
+          <time id="music-elapsed">0:00</time>
+          <input id="music-seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Tua nhạc" disabled />
+          <time id="music-duration">--:--</time>
+        </div>
+      </div>
+      <div class="music-controls">
+        <button class="music-control" id="music-previous" type="button" title="Bài trước" aria-label="Bài trước" disabled><i data-lucide="skip-back"></i></button>
+        <button class="music-control music-control-play" id="music-play" type="button" title="Phát nhạc" aria-label="Phát nhạc" disabled><i data-lucide="play"></i></button>
+        <button class="music-control" id="music-next" type="button" title="Bài tiếp theo" aria-label="Bài tiếp theo" disabled><i data-lucide="skip-forward"></i></button>
+        <button class="music-control" id="music-mute" type="button" title="Tắt tiếng" aria-label="Tắt tiếng"><i data-lucide="volume-2"></i></button>
+        <span class="music-control-separator" aria-hidden="true"></span>
+        <button class="music-control" id="theme-btn" type="button" aria-label="Toggle light / dark theme" title="Đổi giao diện sáng/tối"><i data-lucide="sun"></i></button>
+      </div>
+      <audio id="music-audio" preload="auto"></audio>
+    </section>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <span class="footer-sub">@baohung.xyz</span>
+  </footer>
+  <script>
+    function updateBiographyClock() {
+      const now = new Date();
+      const date = document.querySelector("#profile-date");
+      const time = document.querySelector("#bio-clock-time");
+      const pad = (value) => String(value).padStart(2, "0");
+
+      if (date) {
+        date.dateTime = now.toISOString();
+        const weekday = new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(now);
+        const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(now);
+        date.textContent = `${weekday}, ${pad(now.getDate())} ${month} ${now.getFullYear()}`;
+      }
+      if (time) {
+        time.dateTime = now.toISOString();
+        time.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      }
+    }
+    updateBiographyClock();
+    window.setInterval(updateBiographyClock, 1000);
+  </script>
+  <script>
+    (() => {
+      const audio = document.querySelector("#music-audio");
+      const trackName = document.querySelector("#music-track-name");
+      const trackStatus = document.querySelector("#music-track-status");
+      const previousButton = document.querySelector("#music-previous");
+      const playButton = document.querySelector("#music-play");
+      const nextButton = document.querySelector("#music-next");
+      const muteButton = document.querySelector("#music-mute");
+      const seek = document.querySelector("#music-seek");
+      const elapsed = document.querySelector("#music-elapsed");
+      const duration = document.querySelector("#music-duration");
+      const art = document.querySelector("#music-art");
+      const enterScreen = document.querySelector("#enter");
+      if (!audio || !trackName || !trackStatus) return;
+
+      const tracks = [
+        { src: "music/music-1.mp3", name: "Táo - Blue Tequila" },
+        { src: "music/music-2.mp3", name: "Thắng - Trước Khi Em Tồn Tại" },
+        { src: "music/music-3.mp3", name: "QNT - Em Làm Gì Mua Dịch" },
+        { src: "music/music-4.mp3", name: "Ngọt - Cho Tôi Đi Theo" },
+        { src: "music/music-5.mp3", name: "Obito - Đánh Đổi" },
+        { src: "music/music-6.mp3", name: "Winno - Muốn Anh Đau" }
+      ];
+      let trackIndex = -1;
+      let playbackRequested = false;
+      let shuffleBag = [];
+      let history = [];
+      let historyIndex = -1;
+
+      function buildShuffleBag(excludeIndex) {
+        const bag = tracks
+          .map((_, index) => index)
+          .filter((index) => index !== excludeIndex);
+
+        for (let index = bag.length - 1; index > 0; index -= 1) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [bag[index], bag[swapIndex]] = [bag[swapIndex], bag[index]];
+        }
+
+        return bag;
+      }
+
+      function nextRandomIndex() {
+        if (!shuffleBag.length) {
+          shuffleBag = buildShuffleBag(trackIndex);
+        }
+
+        const nextIndex = shuffleBag.pop();
+        if (nextIndex !== undefined) return nextIndex;
+
+        shuffleBag = buildShuffleBag(-1);
+        return shuffleBag.pop();
+      }
+
+      function rememberRandomTrack() {
+        const nextIndex = nextRandomIndex();
+        if (nextIndex === undefined) return;
+
+        history = history.slice(0, historyIndex + 1);
+        history.push(nextIndex);
+        historyIndex = history.length - 1;
+        trackIndex = nextIndex;
+      }
+
+      function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+        const wholeSeconds = Math.floor(seconds);
+        return `${Math.floor(wholeSeconds / 60)}:${String(wholeSeconds % 60).padStart(2, "0")}`;
+      }
+
+      function displayTrackName(name) {
+        if (!name) return "Unknown track";
+        const cleanName = name.replace(/\.[^.]+$/, "");
+        return cleanName.replace(/^music[-_]?/i, "");
+      }
+
+      function updateProgress() {
+        if (!seek || !elapsed || !duration) return;
+        const total = Number.isFinite(audio.duration) ? audio.duration : 0;
+        seek.max = String(Math.max(total, 1));
+        seek.value = String(Math.min(audio.currentTime || 0, total || 1));
+        seek.disabled = total <= 0;
+        elapsed.textContent = formatTime(audio.currentTime || 0);
+        duration.textContent = total ? formatTime(total) : "--:--";
+      }
+
+      function setIcon(button, icon, label) {
+        button.innerHTML = `<i data-lucide="${icon}"></i>`;
+        button.setAttribute("aria-label", label);
+        button.title = label;
+        window.lucide?.createIcons({ nodes: [button] });
+      }
+
+      function showTrack() {
+        const track = tracks[trackIndex];
+        if (!track) return;
+        audio.src = track.src;
+        audio.load();
+        trackName.textContent = displayTrackName(track.name);
+        trackStatus.textContent = `Ngẫu nhiên · ${trackIndex + 1}/${tracks.length}`;
+        previousButton.disabled = tracks.length < 2;
+        nextButton.disabled = tracks.length < 2;
+        playButton.disabled = true;
+        if (seek) seek.disabled = true;
+        if (elapsed) elapsed.textContent = "0:00";
+        if (duration) duration.textContent = "--:--";
+      }
+
+      async function playTrack() {
+        try {
+          await audio.play();
+          setIcon(playButton, "pause", "Dừng nhạc");
+          trackStatus.textContent = `Ngẫu nhiên · ${trackIndex + 1}/${tracks.length}`;
+        } catch {
+          audio.pause();
+          setIcon(playButton, "play", "Phát nhạc");
+          trackStatus.textContent = "Không phát được file này";
+        }
+      }
+
+      function requestPlayback() {
+        if (playbackRequested) return;
+        playbackRequested = true;
+        trackStatus.textContent = "Loading...";
+
+        if (audio.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+          playTrack();
+          return;
+        }
+
+        audio.load();
+      }
+
+      function stepTrack(direction) {
+        if (tracks.length < 2) return;
+
+        if (direction < 0 && historyIndex > 0) {
+          historyIndex -= 1;
+          trackIndex = history[historyIndex];
+          showTrack();
+          playTrack();
+          return;
+        }
+
+        rememberRandomTrack();
+        showTrack();
+        playTrack();
+      }
+
+      playButton.addEventListener("click", () => {
+        if (audio.paused) playTrack();
+        else audio.pause();
+      });
+      previousButton.addEventListener("click", () => stepTrack(-1));
+      nextButton.addEventListener("click", () => stepTrack(1));
+      seek?.addEventListener("input", () => {
+        if (Number.isFinite(audio.duration)) {
+          audio.currentTime = Number(seek.value);
+          updateProgress();
+        }
+      });
+      audio.addEventListener("timeupdate", updateProgress);
+      audio.addEventListener("durationchange", updateProgress);
+      audio.addEventListener("loadedmetadata", updateProgress);
+      audio.addEventListener("canplay", () => {
+        playButton.disabled = false;
+        trackStatus.textContent = `Ngẫu nhiên · ${trackIndex + 1}/${tracks.length}`;
+        if (playbackRequested) playTrack();
+      });
+      audio.addEventListener("error", () => {
+        trackName.textContent = tracks[trackIndex] ? displayTrackName(tracks[trackIndex].name) : "Không tải được nhạc";
+        trackStatus.textContent = "Kiểm tra file MP3 trong thư mục trang web";
+        playButton.disabled = true;
+        if (seek) seek.disabled = true;
+      });
+      audio.addEventListener("ended", () => stepTrack(1));
+      audio.addEventListener("pause", () => {
+        setIcon(playButton, "play", "Phát nhạc");
+        art?.classList.remove("is-playing");
+      });
+      audio.addEventListener("play", () => {
+        setIcon(playButton, "pause", "Dừng nhạc");
+        art?.classList.add("is-playing");
+      });
+      muteButton.addEventListener("click", () => {
+        audio.muted = !audio.muted;
+        setIcon(muteButton, audio.muted ? "volume-x" : "volume-2", audio.muted ? "Bật tiếng" : "Tắt tiếng");
+      });
+      enterScreen?.addEventListener("click", requestPlayback);
+      enterScreen?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") requestPlayback();
+      });
+      rememberRandomTrack();
+      showTrack();
+    })();
+  </script>
+  <div id="custom-cursor-ring" aria-hidden="true"></div>
+  <div id="custom-cursor-dot" aria-hidden="true"></div>
+  <script>
+    (function () {
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+      var dot = document.getElementById("custom-cursor-dot");
+      var ring = document.getElementById("custom-cursor-ring");
+      if (!dot || !ring) return;
+
+      var dotX = 0, dotY = 0, ringX = 0, ringY = 0;
+      var targetX = 0, targetY = 0;
+      var hasMoved = false;
+
+      window.addEventListener("mousemove", function (e) {
+        targetX = e.clientX;
+        targetY = e.clientY;
+        if (!hasMoved) {
+          hasMoved = true;
+          dotX = ringX = targetX;
+          dotY = ringY = targetY;
+          dot.classList.remove("is-hidden");
+          ring.classList.remove("is-hidden");
+        }
+      });
+
+      window.addEventListener("mouseleave", function () {
+        dot.classList.add("is-hidden");
+        ring.classList.add("is-hidden");
+      });
+
+      document.addEventListener("mousedown", function () {
+        ring.style.transform = "translate(-50%, -50%) scale(0.85)";
+      });
+      document.addEventListener("mouseup", function () {
+        ring.style.transform = "translate(-50%, -50%) scale(1)";
+      });
+
+      var hoverSelector = "a, button, .enter, .nav-link, .social-card, .music-control, [role='button'], input[type='range']";
+
+      document.addEventListener("mouseover", function (e) {
+        if (e.target.closest && e.target.closest(hoverSelector)) {
+          ring.classList.add("is-active");
+          dot.classList.add("is-active");
+        }
+      });
+      document.addEventListener("mouseout", function (e) {
+        if (e.target.closest && e.target.closest(hoverSelector)) {
+          ring.classList.remove("is-active");
+          dot.classList.remove("is-active");
+        }
+      });
+
+      function raf() {
+        dotX += (targetX - dotX) * 0.9;
+        dotY += (targetY - dotY) * 0.9;
+        ringX += (targetX - ringX) * 0.18;
+        ringY += (targetY - ringY) * 0.18;
+
+        dot.style.left = dotX + "px";
+        dot.style.top = dotY + "px";
+        ring.style.left = ringX + "px";
+        ring.style.top = ringY + "px";
+
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    })();
+  </script>
+</body>
+</html>
